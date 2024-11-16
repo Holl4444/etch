@@ -22,8 +22,11 @@
     height: 5vh;
 }
 
-
-
-/* #4d3a4e - dark plum
+.draw {
+    background-color: #4d3a4e;
+}
+/* 
+    #7d3f4f - tudor red
+    #4d3a4e - dark plum
    #84a3b6 - dainty blue
  */
