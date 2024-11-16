@@ -11,9 +11,9 @@ for (box = 0; box < boxes.length; box++) {
 
 popupBtn.addEventListener("click", () => {
   const gridSize = parseInt(
-    prompt("Please enter the length of your grid (100 boxes max)", "4")
+    prompt("Please enter the length of your grid (100 boxes max)")
   );
-  if (!gridSize || isNaN(gridSize)) {
+  if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
     alert("Invalid length");
   }
 });
