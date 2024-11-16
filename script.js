@@ -9,8 +9,20 @@ for (box = 0; box < boxes.length; box++) {
   });
 }
 
+const getGridSize = () => {
+  const gridSize = parseInt(
+    prompt("Please enter the length of your grid (100 boxes max)")
+  );
+  if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
+    alert("Invalid length");
+  }
+  return gridSize;
+};
+
 const createGrid = (size) => {
   const grid = document.querySelector("section");
+  grid.replaceChildren();
+  //grid.innerHTML = "";
   for (let i = 0; i < size; i++) {
     const row = document.createElement("div");
     row.classList.add("row");
@@ -24,14 +36,10 @@ const createGrid = (size) => {
 };
 
 /* delete initial grid
+
+
  */
 
 popupBtn.addEventListener("click", () => {
-    const gridSize = parseInt(
-      prompt("Please enter the length of your grid (100 boxes max)")
-    );
-    if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
-      alert("Invalid length");
-    }
-    createGrid(gridSize);
-  });
+  createGrid(getGridSize());
+});
