@@ -1,3 +1,14 @@
+/* TODO: 
+
+Make grid and button consistent size by giving container dimensions
+and using borders instead of gaps?
+
+Style button
+
+Figure out how to make it run faster
+
+  */
+
 const boxes = document.getElementsByClassName("column");
 const popupBtn = document.getElementById("popup-btn");
 
