@@ -16,11 +16,13 @@
     column-gap: 1vh;
 }
 
-.column.one, .column.two, .column.three, .column.four {
+.column {
     background-color: #84a3b6;
     width: 5vw;
     height: 5vh;
 }
+
+
 
 /* #4d3a4e - dark plum
    #84a3b6 - dainty blue
