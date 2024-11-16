@@ -3,6 +3,25 @@
     color: #84a3b6;
 }
 
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1vw;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    column-gap: 1vh;
+}
+
+.column.one, .column.two, .column.three, .column.four {
+    background-color: #84a3b6;
+    width: 5vw;
+    height: 5vh;
+}
+
 /* #4d3a4e - dark plum
    #84a3b6 - dainty blue
  */
