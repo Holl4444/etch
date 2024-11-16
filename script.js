@@ -29,16 +29,16 @@ const createGrid = (size) => {
     for (let j = 0; j < size; j++) {
       const column = document.createElement("div");
       column.classList.add("column");
+      column.addEventListener("mouseenter", (e) => {
+        {
+          e.target.classList.toggle("draw");
+        }
+      });
       row.appendChild(column);
     }
     grid.appendChild(row);
   }
 };
-
-/* delete initial grid
-
-
- */
 
 popupBtn.addEventListener("click", () => {
   createGrid(getGridSize());

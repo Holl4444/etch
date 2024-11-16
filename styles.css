@@ -1,29 +1,39 @@
 * {
-    background-color: #7d3f4f;
-    color: #84a3b6;
+  background-color: #7d3f4f;
+  color: #84a3b6;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 1vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1vw;
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    column-gap: 1vh;
+  display: flex;
+  justify-content: center;
+  column-gap: 1vh;
 }
 
 .column {
-    background-color: #84a3b6;
-    width: 5vw;
-    height: 5vh;
+  background-color: #84a3b6;
+  width: 5vw;
+  height: 5vh;
 }
 
 .draw {
-    background-color: #4d3a4e;
+  background-color: #4d3a4e;
 }
 /* 
     #7d3f4f - tudor red
