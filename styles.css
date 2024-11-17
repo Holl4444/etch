@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid #bed2df;
 }
 
 .row {
@@ -37,6 +37,13 @@
 
 .draw {
   background-color: #4d3a4e;
+}
+
+button {
+  margin: 2vh;
+  font-size: 6rem;
+  background-color: #b66c7f;
+  color: #bed2df;
 }
 /* 
     #7d3f4f - tudor red
