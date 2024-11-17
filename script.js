@@ -13,11 +13,14 @@ window.onload = () => {
   createGrid(4);
 };
 
+// If the entry is cancelled cancel
 const getGridSize = () => {
-  const gridSize = parseInt(
-    prompt("Please enter the length of your grid (100 boxes max)")
+  const gridSize = prompt(
+    "Please enter the length of your grid (100 boxes max)"
   );
-  if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
+  if (gridSize == null) {
+    return;
+  } else if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
     alert("Invalid length");
     getGridSize();
   }
@@ -28,22 +31,25 @@ const createGrid = (size) => {
   isPenDown = true;
   let attribute = `min-height: ${80 / size}vh; min-width: ${80 / size}vw;`;
   const grid = document.querySelector("section");
-  grid.replaceChildren();
-  for (let i = 0; i < size; i++) {
-    const row = document.createElement("div");
-    row.classList.add("row");
-    for (let j = 0; j < size; j++) {
-      const column = document.createElement("div");
-      column.classList.add("column");
-      column.setAttribute("style", attribute);
-      column.addEventListener("mouseenter", (e) => {
-        if (isPenDown) {
-          e.target.classList.toggle("draw");
-        }
-      });
-      row.appendChild(column);
+  // If we have a valid input for size
+  if (size) {
+    grid.replaceChildren();
+    for (let i = 0; i < size; i++) {
+      const row = document.createElement("div");
+      row.classList.add("row");
+      for (let j = 0; j < size; j++) {
+        const column = document.createElement("div");
+        column.classList.add("column");
+        column.setAttribute("style", attribute);
+        column.addEventListener("mouseenter", (e) => {
+          if (isPenDown) {
+            e.target.classList.toggle("draw");
+          }
+        });
+        row.appendChild(column);
+      }
+      grid.appendChild(row);
     }
-    grid.appendChild(row);
   }
 };
 
