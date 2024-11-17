@@ -55,6 +55,10 @@ details {
 details > p {
   font-size: 4rem;
 }
+
+summary {
+  list-style: none;
+}
 /* 
     #7d3f4f - tudor red
     #4d3a4e - dark plum
