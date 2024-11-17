@@ -32,7 +32,7 @@ const getGridSize = () => {
 
 const createGrid = (size) => {
   isPenDown = true;
-  let attribute = `min-height: ${80 / size}vh; min-width: ${80 / size}vw;`;
+  let attribute = `min-height: ${150 / size}rem; min-width: ${150 / size}rem;`;
   const grid = document.querySelector("section");
   // If we have a valid input for size
   if (size) {

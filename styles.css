@@ -12,8 +12,8 @@
 }
 
 .grid-container {
-  height: 80vh;
-  width: 80vw;
+  height: 150rem;
+  width: 150rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +30,8 @@
 
 .column {
   box-sizing: border-box;
-  min-height: 0.8vh;
-  min-width: 0.8vw;
+  min-height: 8rem;
+  min-width: 8rem;
   background-color: #84a3b6;
   border: 2px solid #4d3a4e;
 }
