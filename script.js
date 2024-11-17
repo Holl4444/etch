@@ -7,6 +7,8 @@ Style button
 
 Figure out how to make it run faster
 
+Add way to toggle individual cells...button also pressed? click?
+
   */
 
 const boxes = document.getElementsByClassName("column");
