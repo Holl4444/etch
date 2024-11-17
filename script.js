@@ -1,27 +1,18 @@
 /* TODO: 
 
-Style button
-
 Figure out how to make it run faster
 
-Add way to toggle individual cells...button also pressed? click?
+Stop space triggering button on user created grids.
 
   */
 
 const boxes = document.getElementsByClassName("column");
 const popupBtn = document.getElementById("popup-btn");
+let isPenDown = false;
 
 window.onload = () => {
   createGrid(4);
 };
-
-for (box = 0; box < boxes.length; box++) {
-  boxes[box].addEventListener("mouseenter", (e) => {
-    {
-      e.target.classList.toggle("draw");
-    }
-  });
-}
 
 const getGridSize = () => {
   const gridSize = parseInt(
@@ -34,6 +25,7 @@ const getGridSize = () => {
 };
 
 const createGrid = (size) => {
+  isPenDown = true;
   let attribute = `min-height: ${80 / size}vh; min-width: ${80 / size}vw;`;
   const grid = document.querySelector("section");
   grid.replaceChildren();
@@ -45,7 +37,7 @@ const createGrid = (size) => {
       column.classList.add("column");
       column.setAttribute("style", attribute);
       column.addEventListener("mouseenter", (e) => {
-        {
+        if (isPenDown) {
           e.target.classList.toggle("draw");
         }
       });
@@ -54,6 +46,18 @@ const createGrid = (size) => {
     grid.appendChild(row);
   }
 };
+
+window.addEventListener("keydown", (e) => {
+  if (isPenDown && e.code === "Space") {
+    isPenDown = false;
+  }
+});
+
+window.addEventListener("keyup", (e) => {
+  if (e.code === "Space") {
+    isPenDown = true;
+  }
+});
 
 popupBtn.addEventListener("click", () => {
   createGrid(getGridSize());
