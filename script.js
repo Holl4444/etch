@@ -19,6 +19,7 @@ const getGridSize = () => {
   );
   if (!gridSize || isNaN(gridSize) || gridSize > 100 || gridSize < 1) {
     alert("Invalid length");
+    getGridSize();
   }
   return gridSize;
 };
