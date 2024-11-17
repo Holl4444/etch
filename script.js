@@ -2,7 +2,6 @@
 
 Figure out how to make it run faster
 
-Stop space triggering button on user created grids.
 
   */
 
@@ -50,12 +49,14 @@ const createGrid = (size) => {
 window.addEventListener("keydown", (e) => {
   if (isPenDown && e.code === "Space") {
     isPenDown = false;
+    e.preventDefault();
   }
 });
 
 window.addEventListener("keyup", (e) => {
   if (e.code === "Space") {
     isPenDown = true;
+    e.preventDefault();
   }
 });
 
