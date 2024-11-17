@@ -18,7 +18,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #bed2df;
+  border: 10px solid #bed2df;
+  box-shadow: 0 0 5px 10px #4d3a4e;
 }
 
 .row {
