@@ -43,7 +43,10 @@ button {
   margin-top: 2vh;
   font-size: 6rem;
   background-color: #b66c7f;
-  color: #bed2df;
+  color: #4d3a4e;
+  border: 2px solid #4d3a4e;
+  border-radius: 55px;
+  padding: 1vh;
 }
 
 details {
