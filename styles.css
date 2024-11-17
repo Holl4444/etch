@@ -40,24 +40,36 @@
 }
 
 button {
-  margin: 2vh;
+  margin-top: 2vh;
   font-size: 6rem;
   background-color: #b66c7f;
   color: #bed2df;
 }
 
 details {
-  margin: 2vh;
-  font-size: 5rem;
-  text-align: center;
+  margin-bottom: 1vh;
+  margin: 1vh 0;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 details > p {
-  font-size: 4rem;
+  font-size: 3rem;
+  background-color: #4d3a4e;
+  border: 1px solid #4d3a4e;
+  border-radius: 15px;
+  padding: 15px;
+  white-space: pre-line;
 }
 
 summary {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-line;
+  text-align: center;
+  margin-bottom: 1vh;
 }
 /* 
     #7d3f4f - tudor red
