@@ -1,5 +1,7 @@
 # Etch
 
+Check out the upgtaded project at https://github.com/Holl4444/Etch-extras
+
 ToP etch-a-sketch project
 
 Tiles change colour on mouse over.\
